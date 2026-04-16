@@ -1,4 +1,3 @@
-
 class NameStats:
     def __init__(self, name: str, sex: str):
         self.__name = name

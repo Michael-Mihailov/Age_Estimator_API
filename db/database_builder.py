@@ -23,7 +23,7 @@ life_table_male = LifeTable(life_table_male_path, target_year=target_year)
 
 name_stats_entry_map = {} # {(name, sex): NameStats}
 
-for year in range(start_year, target_year + 1 - 2):
+for year in range(start_year, target_year + 1):
     births_table_path = names_base_path / f"yob{year}.txt"
     births_table = BirthsTable(births_table_path)
     rank = {'F': 0, 'M': 0} # separate rank counters for male and female
@@ -55,6 +55,9 @@ for name_stats_entry in name_stats_alive_popularity_rank_non_gendered:
 Base.metadata.create_all(engine) # creates the tables in the database if they don't exist yet
 session = SessionLocal()
 
+session.query(NameStatsTable).delete()
+session.commit()
+
 for name_stats_entry in name_stats_entry_map.values():
     name_stats_table_entry = NameStatsTable(
         name=name_stats_entry.name,
@@ -81,7 +84,7 @@ for name_stats_entry in name_stats_entry_map.values():
         baby_name_popularity_rank_gendered_by_year=json.dumps(name_stats_entry.baby_name_popularity_rank_gendered_by_year)
     )
     session.add(name_stats_table_entry)
+session.commit()
 
 # SHUTDOWN
-session.commit()
 session.close()
