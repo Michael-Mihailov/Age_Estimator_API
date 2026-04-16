@@ -20,10 +20,11 @@ class LifeTable:
                     continue
 
                 birth_year = int(parts[0])
-                age = int(parts[1]).replace('+', '')
+                age = int(parts[1].replace('+', ''))
 
                 if age == 0:
                     self.__starting_births_count = int(parts[5])
+
                 if birth_year + age == self.__target_year:
                     life_table[birth_year] = int(parts[5]) / self.__starting_births_count
         
