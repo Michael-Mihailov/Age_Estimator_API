@@ -6,19 +6,29 @@ A project to estimate a person's age using their first name.
 
 ---
 
+## Requirements
+
+Install the required dependency:
+
+```bash id="9kq2m1"
+pip install sqlalchemy
+```
+
+---
+
 ## How to Run
 
 ### Build the Database
 
 Run the following command to generate the SQLite database:
 
-```bash
+```bash id="4tq8ld"
 python db/database_builder.py
 ```
 
 This will create:
 
-```
+```text id="v2m9xa"
 data/names.db
 ```
 
