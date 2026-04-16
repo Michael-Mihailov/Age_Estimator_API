@@ -14,6 +14,11 @@ class LifeTable:
         with open(self.__path, 'r') as f:
             for line in f:
                 parts = line.strip().split()
+                try:
+                    int(parts[0]) # check if the first part is an integer (birth year), if not, skip this line (header or malformed line)
+                except (ValueError, IndexError):
+                    continue
+
                 birth_year = int(parts[0])
                 age = int(parts[1]).replace('+', '')
 

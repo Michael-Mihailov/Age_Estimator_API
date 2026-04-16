@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Column, String, Float, Integer, Text
 from db.base import Base
 
-class NameStats(Base):
+class NameStatsTable(Base):
     __tablename__ = "name_stats"
 
     name = Column(String, primary_key=True)
