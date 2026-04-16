@@ -24,5 +24,5 @@ class NameStatsTable(Base):
     alive_popularity_rank_non_gendered = Column(Integer, nullable=False) # The rank of this name in terms of estimated alive count
     alive_popularity_rank_gendered = Column(Integer, nullable=False) # The rank of this name in terms of estimated alive count within gender
 
-    baby_name_popularity_rank_non_gendered_by_year = Column(Text, nullable=False) # JSON string [{rank: rank1, year: year1}, {rank: rank2, year: year2}, ...] for the rank of this name among baby names in that year (most to least popular years)
-    baby_name_popularity_rank_gendered_by_year = Column(Text, nullable=False) # JSON string [{rank: rank1, year: year1}, {rank: rank2, year: year2}, ...] for the rank of this name among baby names in that year within gender
+    baby_name_popularity_rank_non_gendered_by_year = Column(Text, nullable=False) # JSON string {year: rank} for the rank of this name among baby names in that year
+    baby_name_popularity_rank_gendered_by_year = Column(Text, nullable=False) # JSON string {year: rank} for the rank of this name among baby names in that year within gender

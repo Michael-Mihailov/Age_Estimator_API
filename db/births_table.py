@@ -65,11 +65,11 @@ class BirthsTable:
 
         return births_list_combined
     
-    def get_birth_list_female(self):
+    def get_birth_list_ordered_female(self):
         return self.__births_list_female
 
-    def get_birth_list_male(self):
+    def get_birth_list_ordered_male(self):
         return self.__births_list_male
 
-    def get_birth_list_combined(self):
+    def get_birth_list_ordered_combined(self):
         return self.__births_list_combined
