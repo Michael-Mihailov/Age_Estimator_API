@@ -26,13 +26,6 @@ def estimate_age(
         raise HTTPException(status_code=404)
     
     return result
-
-@app.post("/nameinfo", response_model=NameStatsResponse)
-def create_name(name: str = Query(..., description="First name to create"),
-                sex: str = Query(..., description="Gender: 'male' or 'female'"),
-                year: str = Query(..., description="Year of birth"),
-                count: int = Query(..., description="Number of occurrences")):
-    pass
     
 
 if __name__ == "__main__":

@@ -54,8 +54,5 @@ class NameStatsService:
             top_5_popular_years=top_5_years
         )
 
-    def create_name(self, name: str, sex: str, year: str, count: int):
-        pass
-
     def __del__(self):
         self.db.close()
