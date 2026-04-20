@@ -12,6 +12,9 @@ Install the required dependency:
 
 ```bash id="9kq2m1"
 pip install sqlalchemy
+
+pip install fastapi
+pip install uvicorn
 ```
 
 ---
