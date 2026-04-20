@@ -1,10 +1,10 @@
-from births_table import BirthsTable
-from name_stats import NameStats
-from engine import engine, SessionLocal
-from base import Base
-from models import NameStatsTable
+from db.births_table import BirthsTable
+from db.name_stats import NameStats
+from db.engine import engine, SessionLocal
+from db.base import Base
+from db.models import NameStatsTable
 from pathlib import Path
-from life_table import LifeTable
+from db.life_table import LifeTable
 import json
 
 

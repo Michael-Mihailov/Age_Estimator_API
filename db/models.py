@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Float, Integer, Text
-from base import Base
+from db.base import Base
 
 class NameStatsTable(Base):
     __tablename__ = "name_stats"
