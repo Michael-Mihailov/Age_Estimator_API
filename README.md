@@ -23,7 +23,7 @@ pip install sqlalchemy
 Run the following command to generate the SQLite database:
 
 ```bash id="4tq8ld"
-python db/database_builder.py
+python -m db.database_builder
 ```
 
 This will create:
