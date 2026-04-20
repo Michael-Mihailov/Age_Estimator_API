@@ -34,7 +34,7 @@ This will create:
 ```text id="v2m9xa"
 data/names.db
 ```
-### Run the server
+### Run the API server
 
 Run the following command:
 ```bash
