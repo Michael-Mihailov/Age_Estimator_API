@@ -15,6 +15,11 @@ pip install sqlalchemy
 
 pip install fastapi
 pip install uvicorn
+
+pip install streamlit
+pip install requests
+pip install pandas
+pip install plotly
 ```
 
 ---
@@ -40,6 +45,21 @@ Run the following command:
 ```bash
 python api/main_api.py
 ```
+
+### Run the demo web-server
+
+Run the following command:
+```bash
+python -m streamlit run demo/demo_app.py --server.port 8501
+```
+
+Now please open:
+
+```text id="v2m9xa"
+http://localhost:8501/
+```
+
+on you browser.
 ---
 
 ## Data Sources
