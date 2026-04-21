@@ -53,13 +53,12 @@ Run the following command:
 python -m streamlit run demo/demo_app.py --server.port 8501
 ```
 
-Now please open:
+Now please use your browser to open:
 
 ```text id="v2m9xa"
 http://localhost:8501/
 ```
 
-on you browser.
 ---
 
 ## Data Sources
