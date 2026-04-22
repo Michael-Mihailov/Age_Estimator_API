@@ -55,22 +55,34 @@ def render_card(data):
         return
 
     st.markdown(f"""
-        <div style="
-            background-color:#ffffff;
-            padding:20px;
-            border-radius:12px;
-            margin-bottom:15px;
-            border:1px solid #e6e6e6;
-            box-shadow:0 2px 6px rgba(0,0,0,0.05);
-        ">
-            <h3 style="margin-bottom:10px;">{data['name']} ({data['sex']})</h3>
-            <p><b>Estimated Age:</b> {data['estimated_age']:.2f}</p>
-            <p><b>Most Likely Age:</b> {data['most_likely_age']}</p>
-            <p><b>Total Count:</b> {data['total_occurrence_count']}</p>
-            <p><b>Estimated Alive:</b> {data['estimated_alive_count']:.0f}</p>
-            <p><b>Rank (Gendered):</b> {data['all_time_rank_gendered']}</p>
-        </div>
-    """, unsafe_allow_html=True)
+<div style="
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
+    border:1px solid rgba(128,128,128,0.2);
+    background-color: rgba(128,128,128,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+">
+
+<h3 style="margin-bottom:10px;">
+    {data['name']} ({data['sex']})
+</h3>
+
+<div style="
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    line-height:1.6;
+">
+    <div><b>Estimated Age</b><br>{data['estimated_age']:.2f}</div>
+    <div><b>Most Likely Age</b><br>{data['most_likely_age']}</div>
+    <div><b>Total Count</b><br>{data['total_occurrence_count']}</div>
+    <div><b>Estimated Alive</b><br>{data['estimated_alive_count']:.0f}</div>
+    <div><b>Rank (Gendered)</b><br>{data['all_time_rank_gendered']}</div>
+</div>
+
+</div>
+""", unsafe_allow_html=True)
 
 
 # 🔹 Cards side-by-side
@@ -118,11 +130,11 @@ st.divider()
 if data1 and data2:
     df_compare = pd.DataFrame({
         "Count Comparison": ["Total Occurrences", "Estimated Alive"],
-        data1["name"]: [
+        f"{data1['name']} ({data1['sex']})": [
             data1["total_occurrence_count"],
             data1["estimated_alive_count"]
         ],
-        data2["name"]: [
+        f"{data2['name']} ({data2['sex']})": [
             data2["total_occurrence_count"],
             data2["estimated_alive_count"]
         ]
