@@ -15,19 +15,19 @@ The `db` module is responsible for building and managing a SQLite database conta
 └─────────────────────────────────────────────────────────────────┘
 
                       database_builder.py
-                           │
-            ┌──────────────┬┴┬──────────────┐
-            │              │  │              │
-            ▼              ▼   ▼              ▼
-      BirthsTable    LifeTable  NameStats  engine/SessionLocal
-            │              │       │              │
-            │              │       └──────┬───────┘
+                            │
+            ┌──────────────┬┴─────────────┐
             │              │              │
-            └──────────────┴──────────────┘
-                           │
-                           ▼
-                   NameStatsTable
-                   (ORM Model)
+            ▼              ▼              ▼
+      BirthsTable    LifeTable  engine/SessionLocal
+            │              │               │
+            └──────────────┘               │
+                           │               │
+                           ▼               │
+                       NameStats           │
+                           │               │
+                           ▼               │
+                   NameStatsTable  <───────┘
                            │
                            ▼
                       SQLite Database
