@@ -11,7 +11,7 @@ The `db` module is responsible for building and managing a SQLite database conta
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    DATABASE BUILDER FLOW                         │
+│                    DATABASE BUILDER FLOW                        │
 └─────────────────────────────────────────────────────────────────┘
 
                       database_builder.py
