@@ -1,4 +1,6 @@
-# Age Estimator API
+# Age Estimator API  
+
+![Demo](images/Dashboard_Screenshot.png)  
 
 ## Description
 
