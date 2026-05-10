@@ -1,3 +1,6 @@
+Michael Mihailov &
+Bethany Feddes
+
 # Age Estimator API  
 
 ![Demo](images/Dashboard_Screenshot.png)  
